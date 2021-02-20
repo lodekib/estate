@@ -1,0 +1,1181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title> Real Estate Landing Page </title>
+    <!-- Required meta tags always come first -->
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta content="UTF-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="real estate landing page freecodecamp project">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Archivo|Open+Sans');
+
+html,
+body {
+    margin: 0;
+}
+
+body {
+    background-image: url('background-img.jpg');
+    width: 100%;
+    height: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    margin: 10px;
+    padding: 10px;
+}
+
+/*header and navigation */
+#header {
+    height: 60px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 520;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#header-img {
+    height: 60px;
+    float: left;
+}
+
+#nav-bar {
+    height: 60px;
+    width: 100%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    text-transform: uppercase;
+    /* float: left; */
+    list-style-type: none;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: block;
+    width: auto;
+    text-decoration: none;
+    line-height: 60px;
+    color: #5A3A0B;
+    font-size: 1.1em;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #BEB5A5;
+}
+
+#loginButton {
+    float: right;
+}
+
+#loginButton ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#loginButton ul li {
+    float: right;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#loginButton ul li .loginButton-link {
+    display: inline-block;
+    padding: 5px 5px 5px 15px;
+    text-decoration: none;
+    line-height: 20px;
+    background-color: blue;
+    color: rgb(241, 237, 237);
+    font-size: 1em;
+    border: solid 2px blue;
+    text-shadow: rgba(0, 0, 0, 0.50) 0 2px 1px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 20px;
+    width: 100px;
+    box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(255, 255, 255, 0.3) 0 1px 0;
+}
+
+#loginButton ul li .loginButton-link:active {
+    border: #EBC8A2;
+    box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 1px 4px;
+}
+
+.toggle,
+#dropdown {
+    display: none;
+}
+
+/*Home section*/
+#home {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+        url('../img/background-img.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 20vh;
+    margin: 0 auto;
+    height: 60%;
+    text-align: center;
+    color: #FEFEFA;
+    text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+}
+
+#homesection {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    height: 30vh;
+    width: 100%;
+}
+
+.home-btn {
+    display: inline-block;
+    width: 25vw;
+    text-align: center;
+    margin: 0 5px;
+    border: solid 1px #FEFEFB;
+    background-color: transparent;
+    padding: 8px;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-out,
+        color 0.3s ease-out;
+}
+
+.home-btn:hover,
+.home-btn:active {
+    background-color: #EADFCE;
+    color: #EADFCE;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.5s ease-in,
+        color 0.5s ease-in;
+}
+
+.home-btn:visited {
+    border: solid 1px #5A3B0C;
+}
+
+/* Search form start*/
+#search-form {
+    margin: 10px auto;
+    display: inline-flex;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+}
+
+#searchInput {
+    margin: 0;
+    padding: 0;
+    width: 50vw;
+    height: 2.5em;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    border: solid 1px #9E937F;
+    box-sizing: border-box;
+    transition: all .5s ease;
+}
+
+#searchButton {
+    /* display: ; */
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: solid 1px #9E937F;
+    border-radius: 0 10px 10px 0;
+    min-width: 10vw;
+    height: 2.5em;
+    cursor: pointer;
+    background-color: #9E937F;
+    color: #FFFFFF;
+}
+
+#searchButton:hover {
+    background-color: #5A3A0B;
+    border: solid 1px #5A3A0B;
+}
+
+#searchInput:hover {
+    border: solid 1px #5A3A0B;
+}
+
+#searchInput:focus {
+    background-color: #EADFCE;
+    width: 60vw;
+}
+
+/* Search form end*/
+/* Available homes section */
+
+#availableHome {
+    background-color: #EAC8A2;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    text-transform: capitalize;
+    padding: 10px 0 10px 0;
+    outline: none;
+    border: none;
+}
+
+#rent {
+    background-color: #EBDFCD;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    text-transform: capitalize;
+    padding: 10px 0 10px 0;
+    outline: none;
+    border: none;
+}
+
+#availableHome>h2,
+#rent>h2 {
+    margin-left: 20px;
+    color: #5A3B0C;
+}
+
+#available-wrapper,
+#rent-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, .5fr));
+    grid-template-rows: auto;
+    /* grid-column-gap: ; */
+    grid-row-gap: 2em;
+    justify-content: center;
+    /* overflow: ; */
+}
+
+.tiles {
+    background-color: #FDF8E8;
+    color: white;
+    padding: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: solid 1px #7E7361;
+    border-radius: 8px 8px 0 0;
+    text-decoration: none;
+}
+
+.tiles>img:hover {
+    transform: scale(1.1);
+}
+
+.tiles>img {
+    transition: all 0.3s ease;
+    display: block;
+    position: relative;
+    height: 150px;
+    width: 100%;
+    align-self: stretch;
+    justify-self: stretch;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px 8px 0 0;
+}
+
+.info-tiles {
+    display: block;
+    padding: 0;
+    margin: 0;
+    color: #222;
+    height: 1.25em;
+    background-color: rgba(126, 115, 97, 0.9);
+    /* border-radius: ; */
+
+}
+
+.info-tiles .fa {
+    padding: 0 2px 0 2px;
+}
+
+.info-tiles-header {
+    font-weight: 600;
+}
+
+.info-tiles-span {
+    font-weight: 500;
+}
+
+.info-tiles-p {
+    font-weight: 300;
+}
+
+/* Available homes section */
+
+/*Prcing tags start*/
+#pricing {
+    margin: 30px 0 30px 0;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    width: 100%;
+    height: auto;
+    background-color: #FEFEF8;
+}
+
+#pricing-header {
+    /* display: ; */
+    font-size: 30px;
+    text-transform: capitalize;
+    color: #5A3B0C;
+}
+
+.house-tag {
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    justify-items: center;
+    align-items: center;
+}
+
+.tags {
+    margin: 0 15px 0 15px;
+    width: 195px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 3px 2px -1px rgba(0, 0, 0, .3);
+    justify-self: center;
+    align-self: center;
+}
+
+.tag-header {
+    position: relative;
+    font-size: 1.7em;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 35px;
+    margin: -20px -20px 20px -20px;
+    background-color: #eee;
+    background-image: linear-gradient(#fff, #eee);
+}
+
+.bronze {
+    color: #A57164;
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to left, #CD7F32, rgba(0, 0, 0, 0))1 1 100%;
+}
+
+.gold {
+    color: #a67c00;
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to left, #ffbf00, rgba(0, 0, 0, 0))1 1 100%;
+}
+
+.platinum {
+    color: #474747;
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to left, #929290, rgba(0, 0, 0, 0))1 1 100%;
+}
+
+.price {
+    font-size: 1.5em;
+}
+
+.house-tag ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.house-tag ul li {
+    margin: 5px 0 5px 0;
+    padding: 5px 0 5px 0;
+
+}
+
+.house-tag ul li strong {
+    font-weight: 600;
+    color: #5A3B0C;
+}
+
+/*style sign-up buttons*/
+.signup {
+    display: block;
+    text-transform: uppercase;
+    font: bold 14px;
+    margin: 5px;
+    padding: 8px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2px;
+    background-color: #eee;
+    transition: 0.5s;
+}
+
+.signup-bronze {
+    background-image: linear-gradient(to right, #CD7F32 0%, #A57164 51%, #CD7F32 100%);
+    box-shadow: 1px 2px 4px -1px #CD7F32;
+}
+
+.signup-gold {
+    background-image: linear-gradient(to right, #ffbf00 0%, #bf9b30 51%, #ffbf00 100%);
+    box-shadow: 1px 2px 4px -1px #a67c00;
+}
+
+.signup-platinum {
+    background-image: linear-gradient(to right, #e5e4e2 0%, #474747 51%, #e5e4e2 100%);
+    box-shadow: 1px 2px 4px -1px #262626;
+}
+
+.signup:hover {
+    background-position: right center;
+}
+
+.signup:active {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .3) inset;
+}
+
+/*style sign-up buttons*/
+/*Prcing tags end*/
+/*How it Works start*/
+#howItWorks {
+    margin: 25px;
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #FBFDFE;
+}
+
+.howItWorks-page {
+    margin: 10px;
+    padding: 10px;
+}
+
+.howItWorks-page h1 {
+    padding: 20px;
+    color: #5A3B0C;
+}
+
+/*How it Works ends
+/*sign up and login form */
+.signup-page {
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.6));
+    background-size: cover;
+    margin: 0;
+    padding: 10%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: #fefefa;
+    text-transform: capitalize;
+    margin: 0 auto;
+    position: fixed;
+    overflow: auto;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+    display: none;
+    animation-name: openmodal;
+    animation-duration: 1s;
+}
+
+@keyframes openmodal {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.signup-form {
+    width: 40vw;
+    max-width: 45vw;
+    margin: 0 auto;
+}
+
+.register-form {
+    margin: 0 auto;
+    padding: 0px 20px 0;
+    width: 45vw;
+    max-width: 45vw;
+    background: #fff;
+    box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.6),
+        0px 4px 20px rgba(0, 0, 0, 0.33);
+    border-radius: 5px;
+    position: relative;
+}
+
+.form-header {
+    font-size: 1.7em;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 30px;
+    margin: -20px -20px 20px -20px;
+    background-color: #eee;
+    background-image: linear-gradient(#FEFFFE, #F3F3EC);
+    border-bottom: solid 1px #edc89f;
+    border-radius: 5px 5px 0 0;
+}
+
+.form-header h3 {
+    font-weight: bold;
+    font-size: 24px;
+    padding-bottom: 0;
+    color: #5a3b0c;
+}
+
+.form-inputs {
+    margin-top: 25px;
+}
+
+.form-inputs input {
+    display: block;
+    color: #8f8f8f;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+    width: 100%;
+    border: 0;
+    padding-top: 15px;
+    outline: 1;
+}
+
+.form-inputs input::placeholder {
+    padding-left: 5px;
+    color: #5a3b0c;
+}
+
+.form-inputs input[type="email"]:focus,
+input[type="password"]:focus {
+    background-color: #f3f3ec;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 2px #edc89f, inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+    outline: none;
+    clear: both;
+}
+
+.terms-check {
+    display: block;
+    float: left;
+    height: 25px;
+    margin: 10px 0 10px 0;
+    padding: 0;
+    width: 100%;
+}
+
+#terms {
+    float: left;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.terms-label {
+    margin: 0 0 10px 10px;
+    float: left;
+    color: #7b715b;
+    font-style: italic;
+    font-size: 1em;
+}
+
+#submit {
+    display: block;
+    height: 3em;
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    background: #ABA28E;
+    color: white;
+    border-style: outset;
+    border-color: #ABA28E;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background: #7B715B;
+    border: 1px solid #eee;
+}
+
+.registered {
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}
+
+.registered p {
+    color: #7B715B;
+}
+
+.registered p a {
+    color: #5A3B0C;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/* #sign-in-form {
+     display: none; 
+} */
+
+#sign-up-form {
+    display: block;
+}
+
+.close {
+    display: block;
+    color: #7B715B;
+    font-size: 30px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+/*sign up and login form */
+/* Footer*/
+footer {
+    height: 40vh;
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    background-color: #A6ACAF;
+    color: #17202A;
+    /* font-size: ;
+    font-family: ; */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 50px;
+    grid-template-areas: "foot subscribe "
+        "foot subscribe "
+        "copyright copyright";
+}
+
+#foot {
+    grid-area: foot;
+    padding: 10px 0 0 0;
+    margin: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    transition-delay: 1s;
+    right: 0;
+}
+
+#foot h3:hover {
+    border-bottom: solid 2px #17202A;
+    padding: 0;
+    right: 0;
+}
+
+#subscribe {
+    grid-area: subscribe;
+    text-transform: capitalize;
+    place-self: center;
+}
+
+#subscribe p {
+    color: #5D6D7E;
+    font-size: 0.7em;
+}
+
+#subcribe-email {
+    border: none;
+    outline: 1;
+    background: inherit;
+    border-bottom: 1px solid black;
+    padding: 15px;
+    width: 100%;
+}
+
+#subcribe-email:focus {
+    outline: none;
+    border: none;
+}
+
+#copyright {
+    grid-area: copyright;
+    place-self: center;
+    font-size: 1em;
+}
+
+@media all and (max-width: 768px) {
+
+    #loginButton {
+        position: absolute;
+        margin: 0 5px 0 5px;
+        left: 45vw;
+        z-index: 98;
+        top: 0;
+        width: 67px;
+    }
+
+    .home-btn {
+        width: 20vw;
+    }
+
+    .wrapper {
+        float: left;
+        width: 50vw;
+    }
+
+    #header-img {
+        float: left;
+        width: 40vw;
+    }
+
+    .toggle {
+        width: auto;
+        margin-left: 0;
+        display: block;
+        float: left;
+        margin: 10px;
+        z-index: 99;
+        cursor: pointer;
+        float: right;
+
+    }
+
+    #dropdown {
+        display:none ;
+        cursor: pointer;
+        float: right;
+    }
+
+    .bars {
+        position: relative;
+        display: block;
+        height: 5px;
+        width: 35px;
+        background-color: #EDC89B;
+        border-radius: 2px;
+        margin: 6px 0;
+        padding: 0;
+        z-index: 99;
+
+    }
+
+    nav {
+        font-size: 0.9em;
+        font-weight: 400;
+
+    }
+
+    nav .menu {
+        width: 100%;
+        display: none;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        list-style-type: none;
+        background-color: #ffffff;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    nav .menu li {
+        width: 100%;
+        display: block;
+    }
+
+    nav .menu li a {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        text-decoration: none;
+        line-height: 60px;
+        color: #5b3907;
+        font-size: 1.1em;
+        transition: 0.3s ease;
+        float: right;
+    }
+
+    #dropdown:checked~.menu {
+        display: block;
+    }
+
+    .terms-check {
+        height: 35px;
+        margin: 10px 0 10px 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    #terms {
+
+        margin-left: 2px;
+    }
+
+    .terms-label {
+        margin: 0 0 5px 5px;
+        font-size: .8em;
+    }
+}
+
+@media all and (max-width: 496px) {
+
+    #terms {
+        margin-left: 2px;
+    }
+
+    .terms-label {
+        font-size: .7em;
+    }
+
+    .home-btn {
+        width: 10vw;
+        margin: 5px;
+    }
+}
+
+@media all and (max-width: 376px) {}
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <nav id="nav-bar">
+            <div class="wrapper"><a href="#home"><img id="header-img" src="./logo.jpg" alt="Homestead Realty logo"></a></div>
+            <label for="dropdown" class="toggle">
+                <div class="bars-wrapper">
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                </div>
+            </label>
+            <input type="checkbox" id="dropdown" />
+            <ul class="menu">
+                <li>
+                    <a href="#availableHome" class="nav-link">Available Homes</a>
+                </li>
+                <li>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                </li>
+                <li>
+                    <a href="#howItWorks" class="nav-link">How it Works</a>
+                </li>
+            </ul>
+            <div id="loginButton">
+                <ul>
+                    <li>
+                        <a href="./user/signup" class="loginButton-link "> Sign In </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="container">
+        <!-- Home Section-->
+        <section id="home">
+            <h1>Discover a place you'll love to live</h1>
+            <div id="homesection">
+                <a href="#rent" class="home-btn">Rent</a>
+                <a href="#availableHome" class="home-btn">Buy</a>
+                <div role="search" id="search-form">
+                    <input type="search" id="searchInput" placeholder="Search for a house">
+                    <button id="searchButton" type="submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Home Section-->
+        <!-- House for sale section-->
+        <section id="availableHome">
+            <h2>Houses Available for purchase now</h2>
+            <div id="available-wrapper">
+                <a href="#" class="tiles">
+                    <img src="./purchase-img1.jpg" alt="house for purchase">
+                    <h4 class="info-tiles info-tiles-header">$250,000.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>3bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>2br 1646Sqft</span>
+                    <p class="info-tiles info-tiles-p">Cane Garden, Kingstown</p>
+
+                </a>
+
+                <a href="#" class="tiles">
+                    <img src="./purchase-img2.jpg" alt="house for purchase">
+                    <h4 class="info-tiles info-tiles-header">$350,000.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>2bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>1br 1006Sqft</span>
+                    <p class="info-tiles info-tiles-p">Utah, United States</p>
+
+                </a>
+                <a href="#" class="tiles">
+                    <img src="./purchase-img3.jpg" alt="house for purchase">
+                    <h4 class="info-tiles info-tiles-header">$270,000.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>3bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>2br 1846Sqft</span>
+                    <p class="info-tiles info-tiles-p">Angeles Forest, Arcadia, US</p>
+
+                </a>
+                <a href="#" class="tiles">
+                    <img src="./purchase-img4.jpg" alt="house for purchase">
+                    <h4 class="info-tiles info-tiles-header">$3,700,000.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>12bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>10br 28046Sqft</span>
+                    <p class="info-tiles info-tiles-p">Hampstead Heath, London</p>
+
+                </a>
+                <a href="#" class="tiles">
+                    <img src="./purchase-img5.jpg" alt="house for purchase">
+                    <h4 class="info-tiles info-tiles-header">$250,000.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>3bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>2br 1646Sqft</span>
+                    <p class="info-tiles info-tiles-p">Cane Garden, Kingstown</p>
+
+                </a>
+
+                <a href="#" class="tiles">
+                    <img src="./purchase-img1.jpg" alt="house for purchase">
+                    <h4 class="info-tiles info-tiles-header">$350,000.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>2bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>1br 1006Sqft</span>
+                    <p class="info-tiles info-tiles-p">Utah, United States</p>
+
+                </a>
+                <a href="#" class="tiles">
+                    <img src="./purchase-img7.jpg" alt="house for purchase">
+                    <h4 class="info-tiles info-tiles-header">$270,000.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>3bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>2br 1846Sqft</span>
+                    <p class="info-tiles info-tiles-p">Angeles Forest, Arcadia, US</p>
+
+                </a>
+                <a href="#" class="tiles">
+                    <img src="./purchase-img8.jpg" alt="house for purchase">
+                    <h4 class="info-tiles info-tiles-header">$3,700,000.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>12bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>10br 28046Sqft</span>
+                    <p class="info-tiles info-tiles-p">Hampstead Heath, London</p>
+
+                </a>
+                </a>
+                <a href="#" class="tiles">
+                    <img src="./purchase-img9.jpg" alt="house for purchase">
+                    <h4 class="info-tiles info-tiles-header">$700,000.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>5bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>3br 5046Sqft</span>
+                    <p class="info-tiles info-tiles-p">Saint Kitts and Nevis</p>
+
+                </a>
+                <a href="#" class="tiles">
+                    <img src="./purchase-img4.jpg" alt="house for purchase">
+                    <h4 class="info-tiles info-tiles-header">$500,000.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>5bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>4br 4046Sqft</span>
+                    <p class="info-tiles info-tiles-p">South Salt Lake, US</p>
+
+                </a>
+            </div>
+        </section>
+        <!-- House for sale section End-->
+        <!-- Apartments for rent-->
+        <section id="rent">
+            <h2>Apartments Available for rent</h2>
+            <div id="rent-wrapper">
+                <a href="#" class="tiles">
+                    <img src="./rent-img1.jpg" alt="apartment for rent">
+                    <h4 class="info-tiles info-tiles-header">$800.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>1bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>1br 350Sqft</span>
+                    <p class="info-tiles info-tiles-p">Kingstown, St. Vincent</p>
+
+                </a>
+                <a href="#" class="tiles">
+                    <img src="./rent-img2.jpg" alt="apartment for rent">
+                    <h4 class="info-tiles info-tiles-header">$1,000.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>2bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>2br 846Sqft</span>
+                    <p class="info-tiles info-tiles-p">Boston, US</p>
+
+                </a>
+                <a href="#" class="tiles">
+                    <img src="./rent-img3.jpg" alt="apartment for rent">
+                    <h4 class="info-tiles info-tiles-header">$700.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>1bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>1br 446Sqft</span>
+                    <p class="info-tiles info-tiles-p">Sion Hill, St. Vincent</p>
+
+                </a>
+                <a href="#" class="tiles">
+                    <img src="./rent-img4.jpg" alt="apartment for rent">
+                    <h4 class="info-tiles info-tiles-header">$1,500.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>3bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>2br 1006Sqft</span>
+                    <p class="info-tiles info-tiles-p">Saint Kitts and Nevis</p>
+
+                </a>
+                <a href="#" class="tiles">
+                    <img src="./rent-img5.jpg" alt="apartment for rent">
+                    <h4 class="info-tiles info-tiles-header">$500.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>1bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>1br 305Sqft</span>
+                    <p class="info-tiles info-tiles-p">San Francisco, United States</p>
+
+                </a>
+                <a href="#" class="tiles">
+                    <img src="./rent-img6.jpg" alt="apartment for rent">
+                    <h4 class="info-tiles info-tiles-header">$500.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>1bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>1br 605Sqft</span>
+                    <p class="info-tiles info-tiles-p">Castries, St. Lucia</p>
+
+                </a>
+                <a href="#" class="tiles">
+                    <img src="./rent-img7.jpg" alt="apartment for rent">
+                    <h4 class="info-tiles info-tiles-header">$800.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>2bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>1br 705Sqft</span>
+                    <p class="info-tiles info-tiles-p">Budapest, Hungary</p>
+
+                </a>
+                <a href="#" class="tiles">
+                    <img src="./rent-img8.jpg" alt="apartment for rent">
+                    <h4 class="info-tiles info-tiles-header">$500.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>1bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>1br 305Sqft</span>
+                    <p class="info-tiles info-tiles-p">San Francisco, United States</p>
+
+                </a>
+                <a href="#" class="tiles">
+                    <img src="./rent-img3.jpg" alt="apartment for rent">
+                    <h4 class="info-tiles info-tiles-header">$500.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>1bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>1br 605Sqft</span>
+                    <p class="info-tiles info-tiles-p">Castries, St. Lucia</p>
+
+                </a>
+                <a href="#" class="tiles">
+                    <img src="./rent-img5.jpg" alt="apartment for rent">
+                    <h4 class="info-tiles info-tiles-header">$800.00</h4>
+                    <span class="info-tiles info-tiles-span"> <i class="fa fa-bed" aria-hidden="true"></i>2bd <i class="fa fa-bath"
+                            aria-hidden="true"></i>1br 705Sqft</span>
+                    <p class="info-tiles info-tiles-p">Budapest, Hungary</p>
+
+                </a>
+        </section>
+        <!-- Apartments for rent End-->
+        <!-- Pricing-->
+        <section id="pricing">
+            <h1 id="pricing-header">Packages available</h1>
+            <div class="house-tag">
+                <!-- Bronze-->
+                <div class="tags">
+                    <div class="tag-header bronze">Bronze</div>
+                    <div class="price">$75k - 599k</div>
+                    <ul>
+                        <li><strong>Property size:</strong> Up to 5000Sqrt</li>
+                        <li><strong>Home improvements:</strong> No</li>
+                        <li><strong>Buyers Agent provided:</strong> No</li>
+                        <li><strong>Moving consultants:</strong> No</li>
+                        <li><strong>Moving company:</strong> Yes</li>
+                    </ul>
+                    <a class="signup-bronze signup" href="#">Sign up</a>
+                </div>
+                <!-- Gold-->
+                <div class="tags">
+                    <div class="tag-header gold">Gold</div>
+                    <div class="price">$600k - $2MM</div>
+                    <ul>
+                        <li><strong>Property size:</strong> Up to 15,000Sqrt</li>
+                        <li><strong>Home improvements:</strong> Yes</li>
+                        <li><strong>Buyers Agent provided:</strong> No</li>
+                        <li><strong>Moving consultants:</strong> No</li>
+                        <li><strong>Moving company:</strong> Yes</li>
+                    </ul>
+                    <a class="signup-gold signup" href="#">Sign up</a>
+                </div>
+                
+                <div class="tags">
+                    <div class="tag-header platinum">Platinum</div>
+                    <div class="price">$2.1MM - $5MM</div>
+                    <ul>
+                        <li><strong>Property size:</strong> Up to 50,000Sqrt</li>
+                        <li><strong>Home improvements:</strong> Yes</li>
+                        <li><strong>Buyers Agent provided:</strong> Yes</li>
+                        <li><strong>Moving consultants:</strong> Yes</li>
+                        <li><strong>Moving company:</strong> Yes</li>
+                    </ul>
+                    <a class="signup-platinum signup" href="#">Sign up</a>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section id="howItWorks">
+            <div class="howItWorks-page">
+                <h1> See more information about how it works below</h1>
+                <iframe width="960" height="415" id="video" src="https://www.youtube.com/embed/9mHpclgMG8o?rel=0"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </section>
+        <div class="signup-page">
+            <div class="signup-form">
+    </div>
+    <footer>
+        <div id="copyright">
+            <p>All rights reserved &copy; 2021</p>
+        </div>
+    </footer>
+    <script src="./js/scripts.js"></script>
+
+    <script>
+
+
+    </script>
+</body>
+
+</html>
